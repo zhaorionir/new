@@ -1,0 +1,38 @@
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+class CBase {
+public:
+	CBase()
+	{
+		a = 0;
+	}
+	CBase(int c)
+	{
+		a = c;
+	}
+	void display()
+	{
+		cout << "a=" << a << endl;
+	}
+protected:
+	int a;
+
+};
+class CBottole :public CBase 
+{
+	public:
+	CBottole() 
+	{
+		a = 0;
+	}
+	CBottole(int c)
+	{
+		a = c;
+	}
+};
+int main() {
+	CBase obj(200);
+	obj.display();
+	return 0;
+}
